@@ -1,0 +1,42 @@
+{
+  "name": "minifw",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.9.0",
+  "engines": {
+    "node": "^22.22.2 || >=24.15.0",
+    "pnpm": ">=10.9.0",
+    "bun": ">=1.4.0"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "lint": "prettier . --check && eslint .",
+    "lint:fix": "prettier . --write && eslint . --fix",
+    "test:types": "tsc --noEmit && turbo run test:types",
+    "test:unit": "turbo run test:unit",
+    "test:e2e": "turbo run test:e2e",
+    "test:all": "pnpm run test:types && turbo run test:unit test:e2e",
+    "check": "pnpm run lint && pnpm run test:all && pnpm run build",
+    "clean": "turbo run clean",
+    "pack:check": "pnpm run build && pnpm -r exec pnpm pack --pack-destination ../../.artifacts",
+    "changeset": "changeset",
+    "version:packages": "changeset version && pnpm install --lockfile-only",
+    "release": "pnpm run check && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.0",
+    "@types/bun": "^1.4.0",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.0.0",
+    "eslint-plugin-jsdoc": "^65.4.5",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-unicorn": "^79.0.0",
+    "jiti": "^2.0.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-css-order": "^2.0.0",
+    "prettier-plugin-jsdoc": "^1.0.0",
+    "turbo": "^2.0.0",
+    "typescript": "^6.0.0",
+    "typescript-eslint": "^8.0.0"
+  }
+}
