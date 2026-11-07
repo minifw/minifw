@@ -31,5 +31,10 @@
     "test:unit": "bun test --pass-with-no-tests --path-ignore-patterns '**/*.e2e.spec.ts'",
     "test:e2e": "bun test --pass-with-no-tests e2e.spec.ts",
     "prepack": "pnpm run build"
+  },
+  "peerDependencies": {
+    "@minifw/core": "workspace:*",
+    "@minifw/helpers": "workspace:*",
+    "@minifw/server": "workspace:*"
   }
 }

@@ -57,7 +57,17 @@ importers:
 
   lib/markdown: {}
 
-  lib/server: {}
+  lib/server:
+    dependencies:
+      '@minifw/core':
+        specifier: workspace:*
+        version: link:../core
+      '@minifw/helpers':
+        specifier: workspace:*
+        version: link:../helpers
+      '@minifw/markdown':
+        specifier: workspace:*
+        version: link:../markdown
 
 packages:
 
