@@ -72,6 +72,6 @@ user-invocable: true
    publishing; configure any additional registry deliberately rather than
    carrying over the old generated jsr setup.
 
-Changesets status requires an initial commit and a resolvable `main` base. Do
+Changesets status requires an initial commit and a resolvable `master` base. Do
 not create that commit automatically. CI fetches full history and uses
-`origin/main`.
+`origin/master`.

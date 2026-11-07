@@ -85,9 +85,9 @@ next-version numbers before the first real release; do not publish empty
 packages. the previous custom tooling sync, prepare, and generated jsr workflows
 are retired.
 
-the single root Git repository is initialized on `main`, without a commit or
+the single root Git repository is initialized on `master`, without a commit or
 remote. make the initial commit before using `pnpm changeset status`; Changesets
-needs commit history for its comparison. CI compares against `origin/main`.
+needs commit history for its comparison. CI compares against `origin/master`.
 
 ## guidance
 
