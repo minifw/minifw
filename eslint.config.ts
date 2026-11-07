@@ -53,9 +53,11 @@ export default defineConfig(
   },
   {
     files: [
+      "lib/compiler/src/index.ts",
       "lib/core/src/index.ts",
       "lib/helpers/src/index.ts",
       "lib/markdown/src/index.ts",
+      "lib/runtime/src/index.ts",
       "lib/server/src/index.ts",
     ],
     rules: {

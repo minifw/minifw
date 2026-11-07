@@ -2,10 +2,10 @@
 
 ## Repository Model
 
-This is one Git repository and pnpm workspace. The `lib/core`, `lib/helpers`,
-`lib/markdown`, and `lib/server` directories are separate `@minifw/<package>`
-packages. They can be published and versioned independently with Changesets. The
-root package is private.
+This is one Git repository and pnpm workspace. The `lib/compiler`, `lib/core`,
+`lib/helpers`, `lib/markdown`, `lib/runtime`, and `lib/server` directories are
+separate `@minifw/<package>` packages. They can be published and versioned
+independently with Changesets. The root package is private.
 
 - Use pnpm for dependencies and workspace management. Install once at the root;
   keep only `pnpm-lock.yaml`, not per-package Bun or npm lockfiles.

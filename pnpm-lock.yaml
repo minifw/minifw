@@ -51,44 +51,83 @@ importers:
         specifier: ^8.0.0
         version: 8.72.1(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3)
 
-  lib/core:
+  lib/compiler:
     dependencies:
+      '@minifw/core':
+        specifier: workspace:*
+        version: link:../core
       '@minifw/helpers':
         specifier: workspace:*
         version: link:../helpers
       '@minifw/markdown':
         specifier: workspace:*
         version: link:../markdown
+      '@minifw/runtime':
+        specifier: workspace:*
+        version: link:../runtime
+      '@minifw/server':
+        specifier: workspace:*
+        version: link:../server
+
+  lib/core:
+    dependencies:
+      '@minifw/compiler':
+        specifier: workspace:*
+        version: link:../compiler
+      '@minifw/helpers':
+        specifier: workspace:*
+        version: link:../helpers
+      '@minifw/markdown':
+        specifier: workspace:*
+        version: link:../markdown
+      '@minifw/runtime':
+        specifier: workspace:*
+        version: link:../runtime
       '@minifw/server':
         specifier: workspace:*
         version: link:../server
 
   lib/helpers:
     dependencies:
+      '@minifw/compiler':
+        specifier: workspace:*
+        version: link:../compiler
       '@minifw/core':
         specifier: workspace:*
         version: link:../core
       '@minifw/markdown':
         specifier: workspace:*
         version: link:../markdown
+      '@minifw/runtime':
+        specifier: workspace:*
+        version: link:../runtime
       '@minifw/server':
         specifier: workspace:*
         version: link:../server
 
   lib/markdown:
     dependencies:
+      '@minifw/compiler':
+        specifier: workspace:*
+        version: link:../compiler
       '@minifw/core':
         specifier: workspace:*
         version: link:../core
       '@minifw/helpers':
         specifier: workspace:*
         version: link:../helpers
+      '@minifw/runtime':
+        specifier: workspace:*
+        version: link:../runtime
       '@minifw/server':
         specifier: workspace:*
         version: link:../server
 
-  lib/server:
+  lib/runtime:
     dependencies:
+      '@minifw/compiler':
+        specifier: workspace:*
+        version: link:../compiler
       '@minifw/core':
         specifier: workspace:*
         version: link:../core
@@ -98,6 +137,27 @@ importers:
       '@minifw/markdown':
         specifier: workspace:*
         version: link:../markdown
+      '@minifw/server':
+        specifier: workspace:*
+        version: link:../server
+
+  lib/server:
+    dependencies:
+      '@minifw/compiler':
+        specifier: workspace:*
+        version: link:../compiler
+      '@minifw/core':
+        specifier: workspace:*
+        version: link:../core
+      '@minifw/helpers':
+        specifier: workspace:*
+        version: link:../helpers
+      '@minifw/markdown':
+        specifier: workspace:*
+        version: link:../markdown
+      '@minifw/runtime':
+        specifier: workspace:*
+        version: link:../runtime
 
 packages:
 

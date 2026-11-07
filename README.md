@@ -9,12 +9,14 @@ will follow user-written tests, one function at a time.
 one Git repository, one pnpm lockfile, and one set of root configs and skills.
 packages are grouped under `lib/`, separate from root configuration and scripts:
 
-| directory       | package            | scope                                         |
-| --------------- | ------------------ | --------------------------------------------- |
-| `lib/core/`     | `@minifw/core`     | framework primitives and future compiler work |
-| `lib/helpers/`  | `@minifw/helpers`  | shared helpers                                |
-| `lib/markdown/` | `@minifw/markdown` | markdown primitives                           |
-| `lib/server/`   | `@minifw/server`   | Bun server integration through `mini`         |
+| directory       | package            | scope                                 |
+| --------------- | ------------------ | ------------------------------------- |
+| `lib/compiler/` | `@minifw/compiler` | template compiler                     |
+| `lib/core/`     | `@minifw/core`     | framework primitives                  |
+| `lib/helpers/`  | `@minifw/helpers`  | shared helpers                        |
+| `lib/markdown/` | `@minifw/markdown` | markdown primitives                   |
+| `lib/runtime/`  | `@minifw/runtime`  | runtime primitives                    |
+| `lib/server/`   | `@minifw/server`   | Bun server integration through `mini` |
 
 `docs/` is a generic place for written documentation, not a workspace package.
 it has no package manifest, build output, or independent release. the old

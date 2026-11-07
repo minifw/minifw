@@ -1,0 +1,42 @@
+{
+  "name": "@minifw/compiler",
+  "version": "0.0.0",
+  "description": "mini-fw template compiler",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "bun": ">=1.4.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "types": "./src/index.ts",
+  "files": [
+    "dist",
+    "src",
+    "!src/**/*.spec.ts",
+    "!src/**/*.harness.ts",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "bun run ../../scripts/build.ts",
+    "clean": "bun run ../../scripts/clean.ts",
+    "test:types": "tsc --noEmit --project tsconfig.json",
+    "test:unit": "bun test --pass-with-no-tests --path-ignore-patterns '**/*.e2e.spec.ts'",
+    "test:e2e": "bun test --pass-with-no-tests e2e.spec.ts",
+    "prepack": "pnpm run build"
+  },
+  "peerDependencies": {
+    "@minifw/core": "workspace:*",
+    "@minifw/helpers": "workspace:*",
+    "@minifw/markdown": "workspace:*",
+    "@minifw/runtime": "workspace:*",
+    "@minifw/server": "workspace:*"
+  }
+}

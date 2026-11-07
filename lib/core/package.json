@@ -33,6 +33,8 @@
     "prepack": "pnpm run build"
   },
   "peerDependencies": {
+    "@minifw/compiler": "workspace:*",
+    "@minifw/runtime": "workspace:*",
     "@minifw/server": "workspace:*",
     "@minifw/helpers": "workspace:*",
     "@minifw/markdown": "workspace:*"
