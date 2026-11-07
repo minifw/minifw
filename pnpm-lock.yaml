@@ -51,11 +51,41 @@ importers:
         specifier: ^8.0.0
         version: 8.72.1(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3)
 
-  lib/core: {}
+  lib/core:
+    dependencies:
+      '@minifw/helpers':
+        specifier: workspace:*
+        version: link:../helpers
+      '@minifw/markdown':
+        specifier: workspace:*
+        version: link:../markdown
+      '@minifw/server':
+        specifier: workspace:*
+        version: link:../server
 
-  lib/helpers: {}
+  lib/helpers:
+    dependencies:
+      '@minifw/core':
+        specifier: workspace:*
+        version: link:../core
+      '@minifw/markdown':
+        specifier: workspace:*
+        version: link:../markdown
+      '@minifw/server':
+        specifier: workspace:*
+        version: link:../server
 
-  lib/markdown: {}
+  lib/markdown:
+    dependencies:
+      '@minifw/core':
+        specifier: workspace:*
+        version: link:../core
+      '@minifw/helpers':
+        specifier: workspace:*
+        version: link:../helpers
+      '@minifw/server':
+        specifier: workspace:*
+        version: link:../server
 
   lib/server:
     dependencies:
