@@ -43,8 +43,8 @@ user-invocable: true
 
 - Required JSDoc is limited to exported declarations. Internal comments are
   optional and concise.
-- The six public `src/index.ts` entrypoints may remain empty during scaffolding;
-  Unicorn's empty-file rule remains enabled for all other files.
+- The four public `src/index.ts` entrypoints may remain empty during
+  scaffolding; Unicorn's empty-file rule remains enabled for all other files.
 
 ## Commands
 

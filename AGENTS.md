@@ -2,10 +2,10 @@
 
 ## Repository Model
 
-This is one Git repository and pnpm workspace. The `lib/core`, `lib/docs`,
-`lib/helpers`, `lib/markdown`, `lib/server`, and `lib/tooling` directories are
-separate `@minifw/<package>` packages. They can be published and versioned
-independently with Changesets. The root package is private.
+This is one Git repository and pnpm workspace. The `lib/core`, `lib/helpers`,
+`lib/markdown`, and `lib/server` directories are separate `@minifw/<package>`
+packages. They can be published and versioned independently with Changesets. The
+root package is private.
 
 - Use pnpm for dependencies and workspace management. Install once at the root;
   keep only `pnpm-lock.yaml`, not per-package Bun or npm lockfiles.
@@ -46,8 +46,9 @@ unavailable, ask for the relevant source rather than inventing legacy behavior.
 - Shared Bun build and cleanup scripts live in `scripts/`; `turbo.json` owns the
   task graph and cache outputs. Declare internal package dependencies in
   manifests so Turbo can order builds correctly.
-- `lib/tooling` is an empty package reserved for future developer-facing tools,
-  not the owner or distributor of repository configuration.
+- Root `docs/` holds written documentation, not a publishable package. Do not
+  add package manifests or release tasks for it. The old `@minifw/tooling`
+  package is removed; shared repository tools remain at the root.
 - Keep package-specific source, exports, and release metadata in each package.
   Builds emit `dist/`; package types point to shipped ts source. Do not expose
   tests or private source paths as public exports.

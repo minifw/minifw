@@ -11,6 +11,6 @@ run `pnpm version:packages` when preparing a release. Changesets consumes those
 files, updates package versions and changelogs, and refreshes the pnpm lockfile.
 review and commit those changes before running `pnpm release`.
 
-packages are versioned independently. all six start at `0.0.0` as unpublished
+packages are versioned independently. all four start at `0.0.0` as unpublished
 scaffolds; choose the intended next-version numbers before the first release. do
 not publish these empty scaffolds.

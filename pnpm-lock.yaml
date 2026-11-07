@@ -53,15 +53,11 @@ importers:
 
   lib/core: {}
 
-  lib/docs: {}
-
   lib/helpers: {}
 
   lib/markdown: {}
 
   lib/server: {}
-
-  lib/tooling: {}
 
 packages:
 

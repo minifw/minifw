@@ -45,6 +45,10 @@ user-invocable: true
 
 ## Project Direction
 
+- Keep written guides in root `docs/`, separate from the four publishable
+  packages in `lib/`: core, helpers, markdown, and server. Documentation is not
+  an `@minifw/docs` package and has no independent build or release. The old
+  `@minifw/tooling` package is removed; repository tools live at the root.
 - Describe one pnpm monorepo with separately publishable packages, root shared
   configs, Bun runtime/builds/tests, Turbo tasks, and Changesets releases. Use
   current pnpm commands, not the retired tooling sync or prepare pipeline.

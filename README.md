@@ -15,8 +15,11 @@ packages are grouped under `lib/`, separate from root configuration and scripts:
 | `lib/helpers/`  | `@minifw/helpers`  | shared helpers                                |
 | `lib/markdown/` | `@minifw/markdown` | markdown primitives                           |
 | `lib/server/`   | `@minifw/server`   | Bun server integration through `mini`         |
-| `lib/docs/`     | `@minifw/docs`     | documentation-related code                    |
-| `lib/tooling/`  | `@minifw/tooling`  | reserved for future developer tools           |
+
+`docs/` is a generic place for written documentation, not a workspace package.
+it has no package manifest, build output, or independent release. the old
+`@minifw/tooling` package is removed; repository tools and configs live at the
+root.
 
 all packages use `src/index.ts` as their public source entry. Bun builds ESM
 into `dist/`; packages ship that output and ts source for types, excluding

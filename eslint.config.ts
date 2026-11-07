@@ -54,11 +54,9 @@ export default defineConfig(
   {
     files: [
       "lib/core/src/index.ts",
-      "lib/docs/src/index.ts",
       "lib/helpers/src/index.ts",
       "lib/markdown/src/index.ts",
       "lib/server/src/index.ts",
-      "lib/tooling/src/index.ts",
     ],
     rules: {
       "unicorn/no-empty-file": "off",
